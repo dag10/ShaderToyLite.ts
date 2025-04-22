@@ -1,5 +1,5 @@
                                                
-function ShaderToyLite(canvasId) {
+export default function ShaderToyLite(canvasId) {
 
     var hdr = 
     `#version 300 es
@@ -98,6 +98,7 @@ function ShaderToyLite(canvasId) {
     var program = {};   // webgl program
     var location = {}; // uniform location
     var flip = {};      // a b flip
+    var quadBuffer; // Declare quadBuffer here
     
     var setup = () => {
         gl.getExtension( 'OES_texture_float_linear');
@@ -120,7 +121,7 @@ function ShaderToyLite(canvasId) {
         });
     
         // bind the geometry
-        quadBuffer = gl.createBuffer();
+        quadBuffer = gl.createBuffer(); // Assign to the declared variable
         gl.bindBuffer(gl.ARRAY_BUFFER, quadBuffer);
         gl.bufferData(gl.ARRAY_BUFFER, quadVertices, gl.STATIC_DRAW);
         

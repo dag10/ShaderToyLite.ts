@@ -1,0 +1,17 @@
+{
+  "name": "shadertoylite",
+  "version": "1.0.0",
+  "description": "A fork of ShaderToyLite.js that works better with TypeScript.",
+  "main": "ShaderToyLite.js",
+  "types": "ShaderToyLite.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dag10/ShaderToyLite.ts.git"
+  },
+  "author": "Chip Weinberger",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/dag10/ShaderToyLite.ts/issues"
+  },
+  "homepage": "https://github.com/dag10/ShaderToyLite.ts#readme"
+} 
