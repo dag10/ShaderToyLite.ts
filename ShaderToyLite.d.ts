@@ -1,12 +1,14 @@
 declare module 'shadertoylite' {
-    type ShaderToyBufferKey = 'A' | 'B' | 'C' | 'D';
+    type BufferKey = 'A' | 'B' | 'C' | 'D';
+    type TextureName = string & { readonly __textureName: unique symbol };
+    type ChannelName = BufferKey | TextureName; // Buffer key or texture name
 
     interface ShaderConfig {
         source: string;
-        iChannel0?: ShaderToyBufferKey | string; // Buffer key or texture name
-        iChannel1?: ShaderToyBufferKey | string;
-        iChannel2?: ShaderToyBufferKey | string;
-        iChannel3?: ShaderToyBufferKey | string;
+        iChannel0?: ChannelName;
+        iChannel1?: ChannelName;
+        iChannel2?: ChannelName;
+        iChannel3?: ChannelName;
     }
 
     export default class ShaderToyLite {
