@@ -396,6 +396,11 @@ export default function ShaderToyLite(canvasId) {
     this.time = () => {
         return (prevDrawTime - firstDrawTime) * 0.001;
     }
+
+    this.setTime = (time) => {
+        firstDrawTime = Date.now() - time * 1000;
+        prevDrawTime = firstDrawTime;
+    }
     
     this.isPlaying = () => isPlaying;
     

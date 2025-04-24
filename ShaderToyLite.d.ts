@@ -89,5 +89,11 @@ declare module 'shadertoylite' {
          * @returns The current time in seconds.
          */
         time(): number;
+
+        /**
+         * Sets the internal time counter to a specific value.
+         * @param time The time in seconds to set the counter to.
+         */
+        setTime(time: number): void;
     }
 } 
