@@ -80,12 +80,12 @@ declare module 'shadertoylite' {
         /**
          * Resets the internal time counter to zero.
          */
-        rewind(): void;
+        reset(): void;
 
         /**
          * Gets the current internal time counter.
          * @returns The current time in seconds.
          */
-        getTime(): number;
+        time(): number;
     }
 } 
